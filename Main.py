@@ -22,16 +22,16 @@ fromCurrency_label.grid(row=1, column=0, padx=10, pady=5)
 currencies = ["USD", "EUR", "GBP", "INR", "AUD"]
 defaultOption = StringVar(value="USD")
 fromCurrency_menu = OptionMenu(window, defaultOption, *currencies)
-fromCurrency_menu.grid(row=3, column=0, padx=10, pady=5)
+fromCurrency_menu.grid(row=2, column=0, padx=10, pady=5)
 
 toCurrency_label = Label(window, text="To:")
-toCurrency_label.grid(row=1, column=1, padx=10, pady=5)
+toCurrency_label.grid(row=1, column=1, columnspan=2, pady=5)
 toCurrency_entry = OptionMenu(window, defaultOption, *currencies)
-toCurrency_entry.grid(row=2, column=1, padx=10, pady=5)
+toCurrency_entry.grid(row=2, column=1, columnspan=2, pady=5)
 
 # Amount
-amount_label = Label(window, text="Amount:").grid(row=3, column=0, padx=10, pady=5)
-amount_entry = Entry(window).grid(row=4, column=0, padx=10, pady=5)
+amount_label = Label(window, text="Amount:").grid(row=3, column=0, columnspan=2, pady=5)
+amount_entry = Entry(window).grid(row=4, column=0, columnspan=2, pady=5)
 
 # convertedValue_label = Label(window, text="converted", background="#ffffff").grid(row=6)
 
@@ -43,7 +43,7 @@ convertButton = Button(window,
 # Result Label
 result_label = Label(window, 
                      text="Converted Amount: ", 
-                     background="#c1c4c7"
+                     background="#ffffff"
                      ).grid(row=6, column=0, columnspan=2, pady=10)
 
 
